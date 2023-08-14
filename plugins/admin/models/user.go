@@ -20,17 +20,19 @@ import (
 type UserModel struct {
 	Base `json:"-"`
 
-	Id            int64             `json:"id"`
-	Name          string            `json:"name"`
-	UserName      string            `json:"user_name"`
-	Password      string            `json:"password"`
-	Avatar        string            `json:"avatar"`
-	RememberToken string            `json:"remember_token"`
-	Permissions   []PermissionModel `json:"permissions"`
-	MenuIds       []int64           `json:"menu_ids"`
-	Roles         []RoleModel       `json:"role"`
-	Level         string            `json:"level"`
-	LevelName     string            `json:"level_name"`
+	Id              int64             `json:"id"`
+	Name            string            `json:"name"`
+	UserName        string            `json:"user_name"`
+	Password        string            `json:"password"`
+	Avatar          string            `json:"avatar"`
+	RememberToken   string            `json:"remember_token"`
+	Permissions     []PermissionModel `json:"permissions"`
+	MenuIds         []int64           `json:"menu_ids"`
+	Roles           []RoleModel       `json:"role"`
+	Level           string            `json:"level"`
+	LevelName       string            `json:"level_name"`
+	EncryptPassword string            `json:"-"`
+	Secret          string            `json:"-"`
 
 	CreatedAt string `json:"created_at"`
 	UpdatedAt string `json:"updated_at"`

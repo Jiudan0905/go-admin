@@ -169,6 +169,11 @@ func Filter(ctx *context.Context, conn db.Connection) (models.UserModel, bool, b
 	}
 
 	user, ok = GetCurUserByID(int64(id), conn)
+	if ok {
+		if ses.Get("user_password") != nil {
+			user.EncryptPassword = ses.Get("user_password").(string)
+		}
+	}
 
 	if !ok {
 		return user, false, false

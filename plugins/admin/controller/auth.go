@@ -57,6 +57,7 @@ func (h *Handler) Auth(ctx *context.Context) {
 		response.BadRequest(ctx, errMsg)
 		return
 	}
+	user.EncryptPassword = ctx.FormValue("password")
 
 	err := auth.SetCookie(ctx, user, h.conn)
 

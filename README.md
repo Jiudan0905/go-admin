@@ -85,8 +85,6 @@ $ adm init web
 - [mssql](https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.mssql)
 - [postgresql](https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.pgsql)
 - [sqlite](https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.db)
-- [OceanBase](https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.sql)
-
 
 ### Step 2: create main.go
 

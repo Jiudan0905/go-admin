@@ -59,7 +59,7 @@ func EncodePassword(pwd []byte) string {
 // SetCookie set the cookie.
 func SetCookie(ctx *context.Context, user models.UserModel, conn db.Connection) error {
 	ses, err := InitSession(ctx, conn)
-
+	ses.Add("user_password", user.EncryptPassword)
 	if err != nil {
 		return err
 	}
